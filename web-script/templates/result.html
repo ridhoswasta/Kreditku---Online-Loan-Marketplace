@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<title> Kreditku - Marketplace peminjaman online! </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+
+          $('#overlay').fadeOut(8000,function(){
+              $('#muncul').fadeIn(2000);
+            });
+      });
+</script>
+
+  <style type="text/css">
+  /* Background image */
+  .jumbotron {
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-shadow: 2px 2px #000;
+  }
+
+  .lead span {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .bg-cover {
+    background-size: cover;
+    color: white;
+    background-position: center center;
+    position: relative;
+    z-index: -2;
+    background-image: url('https://www.moneycrashers.com/wp-content/uploads/2019/04/personal-loans-pros-cons-1068x713.jpg');
+  }
+
+  .overlay {
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+    /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+  /* STYLES GO HERE */
+  }
+
+  /* Smartphones (landscape) ----------- */
+  @media only screen
+  and (min-width : 321px) {
+  /* STYLES GO HERE */
+  }
+
+  /* Smartphones (portrait) ----------- */
+  @media only screen
+  and (max-width : 320px) {
+  /* STYLES GO HERE */
+  }
+
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px) {
+  /* STYLES GO HERE */
+  }
+
+  /* iPads (landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+  /* STYLES GO HERE */
+  }
+
+  /* iPads (portrait) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+  /* STYLES GO HERE */
+  }
+
+  /* Desktops and laptops ----------- */
+  @media only screen
+  and (min-width : 1224px) {
+  /* STYLES GO HERE */
+  }
+
+  /* Large screens ----------- */
+  @media only screen
+  and (min-width : 1824px) {
+  /* STYLES GO HERE */
+  }
+
+  /* iPhone 5 (portrait &amp; landscape)----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px) {
+  /* STYLES GO HERE */
+  }
+
+  /* iPhone 5 (landscape)----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px)
+  and (orientation : landscape) {
+  /* STYLES GO HERE */
+  }
+
+  /* iPhone 5 (portrait)----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px)
+  and (orientation : portrait) {
+  /* STYLES GO HERE */
+  }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm">
+      <a href="#" class="navbar-brand">
+          <img src="https://i.ibb.co/GCg5487/logo.png" height="28" alt="CoolBrand">
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a href="{{ url_for('index') }}" class="nav-item nav-link active">Beranda</a>
+            <a href="{{ url_for('register') }}" class="nav-item nav-link">Berikan Pinjaman</a>
+            <a href="{{ url_for('daftarpinjaman') }}" class="nav-item nav-link disabled" tabindex="-1">Daftar Pinjaman</a>
+          </div>
+          <div class="navbar-nav ml-auto">
+              <a href="{{ url_for('login') }}" class="nav-item nav-link">Masuk Sebagai Kreditur</a>
+          </div>
+      </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <div id="overlay">
+<div class="container">
+<center>
+        <h3> Harap menunggu A.I Kami sedang bekerja...</h2>
+          <img class="img-fluid" src="static/loading.gif" />
+</center>
+</div>
+ </div>
+ <div id="muncul" style="display:none;">
+<div class="container">
+<center><h4> Halo, {{ nama }} </h4>
+<h5 style="color:{{ color }}"> {{ prediction }}</h5> </center>
+</div>
+</div>
+
+
+   </body>
+</html>

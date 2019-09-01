@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h2>Halaman Kreditur</h2>
+<p>Selamat datang kembali , {{ username }} </p>
+<p> Update data kamu  <a href="{{ url_for('upload_file') }}" > disini </a> 
+
+<h3> Data debitur yang diterima berdasarkan Algoritma Machine Learning Kreditku. </h3>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id Debitur</th>
+        <th scope="col">Nama Debitur</th>
+        <th scope="col">Jenis Kelamin</th>
+      </tr>
+    </thead>
+{% for item in data_diterima %}
+    <tr>
+      <td>{{item['id_aplikasi']}}</td>
+      <td>{{item['nama_debitur']}}</td>
+      <td>
+        {% if item['jenis_kelamin'] == 1 %}
+            Laki - Laki
+        {% else %}
+            Perempuan
+        {% endif %}
+        </td>
+      </tr>
+{% endfor %}
+<table>
+<h3> Data debitur yang ditolak berdasarkan Algoritma Machine Learning Kreditku. </h3>
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id Debitur</th>
+          <th scope="col">Nama Debitur</th>
+          <th scope="col">Jenis Kelamin</th>
+        </tr>
+      </thead>
+  {% for item in data_ditolak %}
+      <tr><td>{{item['id_aplikasi']}}</td><td>{{item['nama_debitur']}}</td>
+        <td>
+          {% if item['jenis_kelamin'] == 1 %}
+              Laki - Laki
+          {% else %}
+              Perempuan
+          {% endif %}
+          </td></tr>
+  {% endfor %}
+  <table>
+{% endblock %}
